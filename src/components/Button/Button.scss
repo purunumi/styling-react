@@ -1,0 +1,35 @@
+@import 'utils';
+
+.button{
+    @include place-at-center();
+    @include media('<huge'){
+        width: 1024px;
+    }
+    @include media('<large'){
+        width: 768px;
+    }
+    @include media('<medium'){
+        width: 90%;
+    }
+
+    display: inline-block;
+    position: fixed;
+    width: 1200px;
+    padding: 2rem 0;
+    border-radius: 4px;
+    background: $oc-green-7;
+    transition: all .2s ease-in;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover{
+        background: $oc-green-6;
+    }
+    &:active{
+        margin-top: 3px;
+        background: $oc-green-8;
+    }
+}
